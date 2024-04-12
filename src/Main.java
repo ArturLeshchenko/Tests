@@ -1,3 +1,4 @@
+import java.awt.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -37,32 +38,18 @@ public class Main {
         personList.add(person14);
         personList.add(person15);
 
+        PersonService.Starting(personList);
         Scanner sc = new Scanner(System.in);
-        System.out.println("Для выбора фильтрации введите цифру");
-        System.out.println("1 для  фильтрации возраста");
-        System.out.println("2 для  фильтрации имени");
-        System.out.println("3 для  фильтрации фамилии");
-        String scnr = sc.nextLine();
-        if (scnr.equals("1")) {
-            List <Person> filteredPersons = PersonService.filtredAge(personList);
-            for (Person p : filteredPersons) {
-                System.out.println(p);
+        System.out.println("Нажмите 1 для выбора опций");
+        System.out.println("Нажмите 0 для завершения");
+        String w = sc.nextLine();
+        if (w.equals("1")){
+            do {
+                PersonService.Starting(personList);
+                return;
             }
-
+            while (w.equals("0"));
         }
-        if (scnr.equals("2")) {
-            List <Person> filteredPersons1 = PersonService.filtredName(personList);
-            for (Person p : filteredPersons1) {
-                System.out.println(p);
-            }
 
-        }
-        if (scnr.equals("3")) {
-            List <Person> filteredPersons1 = PersonService.filtredSecondName(personList);
-            for (Person p : filteredPersons1) {
-                System.out.println(p);
-            }
-
-        }
     }
 }

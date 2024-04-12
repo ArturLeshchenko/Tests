@@ -56,46 +56,35 @@ public class Robot {
         this.Y1 = Y1;
         this.Direction = Direction;
     }
-//    public Direction getDirection() {
-//        // текущее направление взгляда
-//    }
 
-//    public int getX() {
-//
-//        // текущая координата X
-//    }
-//
-//    public int getY() {
-//        // текущая координата Y
-//    }
 
     public void turnLeft() {
-        if (Direction.equals("Up")) {
-            Direction = ("left");
+        if (getDirection().equals("Up")) {
+            Direction = ("Left");
         }
-        if (Direction.equals("Left")) {
+        if (getDirection().equals("Left")) {
             Direction = ("Down");
         }
-        if (Direction.equals("Down")) {
+        if (getDirection().equals("Down")) {
             Direction = ("Right");
         }
-        if (Direction.equals("Right")) {
+        if (getDirection().equals("Right")) {
             Direction = ("Up");
         }
         // повернуться на 90 градусов против часовой стрелки
     }
 
     public void turnRight() {
-        if (Direction.equals("Up")) {
+        if (getDirection().equals("Up")) {
             Direction = ("Right");
         }
-        if (Direction.equals("Left")) {
+        if (getDirection().equals("Left")) {
             Direction = ("Up");
         }
-        if (Direction.equals("Down")) {
+        if (getDirection().equals("Down")) {
             Direction = ("left");
         }
-        if (Direction.equals("Right")) {
+        if (getDirection().equals("Right")) {
             Direction = ("Down");
         }
         // повернуться на 90 градусов по часовой стрелке

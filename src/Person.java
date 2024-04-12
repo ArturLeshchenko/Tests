@@ -1,38 +1,16 @@
+import java.util.List;
 import java.util.Objects;
 
 public class Person {
-    @Override
-    public String toString() {
-        return "Person{" +
-                "name='" + name + '\'' +
-                ", secondName='" + secondName + '\'' +
-                ", age=" + age +
-                '}';
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Person person = (Person) o;
-        return age == person.age && Objects.equals(name, person.name) && Objects.equals(secondName, person.secondName);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(name, secondName, age);
-    }
-
     private String name;
-     private String secondName;
-      private int age;
+    private String secondName;
+    private int age;
 
     public Person(String name, String secondName, int age) {
         this.name = name;
         this.secondName = secondName;
         this.age = age;
     }
-
     public String getName() {
         return name;
     }
@@ -55,6 +33,28 @@ public class Person {
 
     public int getAge() {
         return age;
+    }
+
+    @Override
+    public String toString() {
+        return "Person{" +
+                "name='" + name + '\'' +
+                ", secondName='" + secondName + '\'' +
+                ", age=" + age +
+                '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Person person = (Person) o;
+        return age == person.age && Objects.equals(name, person.name) && Objects.equals(secondName, person.secondName);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, secondName, age);
     }
 }
 
