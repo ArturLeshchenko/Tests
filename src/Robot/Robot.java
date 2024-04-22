@@ -59,34 +59,38 @@ public class Robot {
 
 
     public void turnLeft() {
+        String finalDirection = null;
         if (getDirection().equals("Up")) {
-            Direction = ("Left");
+            finalDirection = ("Left");
         }
         if (getDirection().equals("Left")) {
-            Direction = ("Down");
+            finalDirection = ("Down");
         }
         if (getDirection().equals("Down")) {
-            Direction = ("Right");
+            finalDirection = ("Right");
         }
         if (getDirection().equals("Right")) {
-            Direction = ("Up");
+            finalDirection = ("Up");
         }
+        Direction = finalDirection;
         // повернуться на 90 градусов против часовой стрелки
     }
 
     public void turnRight() {
+        String finalDirection = null;
         if (getDirection().equals("Up")) {
-            Direction = ("Right");
+            finalDirection = ("Right");
         }
         if (getDirection().equals("Left")) {
-            Direction = ("Up");
+            finalDirection = ("Up");
         }
         if (getDirection().equals("Down")) {
-            Direction = ("left");
+            finalDirection = ("left");
         }
         if (getDirection().equals("Right")) {
-            Direction = ("Down");
+            finalDirection = ("Down");
         }
+        Direction = finalDirection;
         // повернуться на 90 градусов по часовой стрелке
     }
 

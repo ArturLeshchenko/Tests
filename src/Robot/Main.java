@@ -23,26 +23,22 @@ public class Main {
             Robot robot1 = new Robot(X1, Y1, Direction);
 
             if (Direction.equals("Up")){
-                Direction = "Up";
                 if (X2 > X1) {
-                    //robot1.turnRight();
-                    Direction = "Right";
+                    robot1.turnRight();
                     do {
                         X1 = X1 + 1;
                     }
                     while (X1!=X2);
 
                     if (Y2>Y1) {
-                        //robot1.turnLeft();
-                        Direction = "Up";
+                        robot1.turnLeft();
                         do {
                             Y1 = Y1 + 1;
                         }
                         while (Y1!=Y2);
                     }
                     else {
-                        //robot1.turnRight();
-                        Direction = "Down";
+                        robot1.turnRight();
                         do {
                             Y1 = Y1 + 1;
                         }
@@ -50,24 +46,21 @@ public class Main {
                     }
                 }
                 if (X2 < X1) {
-                    //robot1.turnLeft();
-                    Direction = "Left";
+                    robot1.turnLeft();
                     do {
                         X1=X1 + 1;
                     }
                     while (X1!=X2);
 
                     if (Y2>Y1) {
-                        //robot1.turnRight();
-                        Direction = "Up";
+                        robot1.turnRight();
                         do {
                             Y1=Y1+1;
                         }
                         while (Y1!=Y2);
                     }
                     else {
-                        //robot1.turnLeft();
-                        Direction = "Down";
+                        robot1.turnLeft();
                         do {
                             Y1 = Y1 + 1;
                         }
@@ -76,26 +69,22 @@ public class Main {
                 }
             }
             if (Direction.equals("Down")){
-                Direction = "Down";
                 if (X2 > X1) {
-                    //robot1.turnLeft();
-                    Direction = "Left";
+                    robot1.turnLeft();
                     do {
                         X1 = X1 + 1;
                     }
                     while (X1!=X2);
 
                     if (Y2>Y1) {
-                        //robot1.turnLeft();
-                        Direction = "Up";
+                        robot1.turnLeft();
                         do {
                             Y1 = Y1 + 1;
                         }
                         while (Y1!=Y2);
                     }
                     else {
-                        //robot1.turnRight();
-                        Direction = "Down";
+                        robot1.turnRight();
                         do {
                             Y1 = Y1 + 1;
                         }
@@ -103,24 +92,21 @@ public class Main {
                     }
                 }
                 if (X2 < X1) {
-                    //robot1.turnRight();
-                    Direction = "Right";
+                    robot1.turnRight();
                     do {
                         X1=X1 + 1;
                     }
                     while (X1!=X2);
 
                     if (Y2>Y1) {
-                        //robot1.turnRight();
-                        Direction = "Up";
+                        robot1.turnRight();
                         do {
                             Y1=Y1+1;
                         }
                         while (Y1!=Y2);
                     }
                     else {
-                        //robot1.turnLeft();
-                        Direction = "Down";
+                        robot1.turnLeft();
                         do {
                             Y1 = Y1 + 1;
                         }
@@ -137,16 +123,14 @@ public class Main {
                     while (X1!=X2);
 
                     if (Y2>Y1) {
-                        //robot1.turnLeft();
-                        Direction = "Up";
+                        robot1.turnLeft();
                         do {
                             Y1 = Y1 + 1;
                         }
                         while (Y1!=Y2);
                     }
                     else {
-                        //robot1.turnRight();
-                        Direction = "Down";
+                        robot1.turnRight();
                         do {
                             Y1 = Y1 + 1;
                         }
@@ -154,25 +138,22 @@ public class Main {
                     }
                 }
                 if (X2 < X1) {
-                    //robot1.turnLeft();
-                    //robot1.turnLeft();
-                    Direction = "Left";
+                    robot1.turnLeft();
+                    robot1.turnLeft();
                     do {
                         X1=X1 + 1;
                     }
                     while (X1!=X2);
 
                     if (Y2>Y1) {
-                        //robot1.turnRight();
-                        Direction = "Up";
+                        robot1.turnRight();
                         do {
                             Y1=Y1+1;
                         }
                         while (Y1!=Y2);
                     }
                     else {
-                        //robot1.turnLeft();
-                        Direction = "Down";
+                        robot1.turnLeft();
                         do {
                             Y1 = Y1 + 1;
                         }
@@ -181,27 +162,23 @@ public class Main {
                 }
             }
             if (Direction.equals("Left")){
-                Direction = "Left";
                 if (X2 > X1) {
-                    //robot1.turnRight();
-                    //robot1.turnRight();
-                    Direction = "Right";
+                    robot1.turnRight();
+                    robot1.turnRight();
                     do {
                         X1 = X1 + 1;
                     }
                     while (X1!=X2);
 
                     if (Y2>Y1) {
-                        //.turnLeft();
-                        Direction = "Up";
+                        robot1.turnLeft();
                         do {
                             Y1 = Y1 + 1;
                         }
                         while (Y1!=Y2);
                     }
                     else {
-                        //robot1.turnRight();
-                        Direction = "Down";
+                        robot1.turnRight();
                         do {
                             Y1 = Y1 + 1;
                         }
@@ -215,16 +192,14 @@ public class Main {
                     while (X1!=X2);
 
                     if (Y2>Y1) {
-                        //robot1.turnRight();
-                        Direction = "Up";
+                        robot1.turnRight();
                         do {
                             Y1=Y1+1;
                         }
                         while (Y1!=Y2);
                     }
                     else {
-                        //robot1.turnLeft();
-                        Direction = "Down";
+                        robot1.turnLeft();
                         do {
                             Y1 = Y1 + 1;
                         }
