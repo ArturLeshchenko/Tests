@@ -40,7 +40,7 @@ public class Main {
                     else {
                         robot1.turnRight();
                         do {
-                            Y1 = Y1 + 1;
+                            Y1 = Y1 - 1;
                         }
                         while (Y1!=Y2);
                     }
@@ -48,7 +48,7 @@ public class Main {
                 if (X2 < X1) {
                     robot1.turnLeft();
                     do {
-                        X1=X1 + 1;
+                        X1=X1 - 1;
                     }
                     while (X1!=X2);
 
@@ -62,7 +62,7 @@ public class Main {
                     else {
                         robot1.turnLeft();
                         do {
-                            Y1 = Y1 + 1;
+                            Y1 = Y1 - 1;
                         }
                         while (Y1!=Y2);
                     }
@@ -86,7 +86,7 @@ public class Main {
                     else {
                         robot1.turnRight();
                         do {
-                            Y1 = Y1 + 1;
+                            Y1 = Y1 - 1;
                         }
                         while (Y1!=Y2);
                     }
@@ -94,7 +94,7 @@ public class Main {
                 if (X2 < X1) {
                     robot1.turnRight();
                     do {
-                        X1=X1 + 1;
+                        X1=X1 - 1;
                     }
                     while (X1!=X2);
 
@@ -108,7 +108,7 @@ public class Main {
                     else {
                         robot1.turnLeft();
                         do {
-                            Y1 = Y1 + 1;
+                            Y1 = Y1 - 1;
                         }
                         while (Y1!=Y2);
                     }
@@ -132,7 +132,7 @@ public class Main {
                     else {
                         robot1.turnRight();
                         do {
-                            Y1 = Y1 + 1;
+                            Y1 = Y1 - 1;
                         }
                         while (Y1!=Y2);
                     }
@@ -141,7 +141,7 @@ public class Main {
                     robot1.turnLeft();
                     robot1.turnLeft();
                     do {
-                        X1=X1 + 1;
+                        X1=X1 - 1;
                     }
                     while (X1!=X2);
 
@@ -155,7 +155,7 @@ public class Main {
                     else {
                         robot1.turnLeft();
                         do {
-                            Y1 = Y1 + 1;
+                            Y1 = Y1 - 1;
                         }
                         while (Y1!=Y2);
                     }
@@ -180,14 +180,14 @@ public class Main {
                     else {
                         robot1.turnRight();
                         do {
-                            Y1 = Y1 + 1;
+                            Y1 = Y1 - 1;
                         }
                         while (Y1!=Y2);
                     }
                 }
                 if (X2 < X1) {
                     do {
-                        X1=X1 + 1;
+                        X1=X1 - 1;
                     }
                     while (X1!=X2);
 
@@ -201,7 +201,7 @@ public class Main {
                     else {
                         robot1.turnLeft();
                         do {
-                            Y1 = Y1 + 1;
+                            Y1 = Y1 - 1;
                         }
                         while (Y1!=Y2);
                     }
@@ -211,7 +211,7 @@ public class Main {
 
             System.out.println(robot2.getX1());
             System.out.println(robot2.getY1());
-            System.out.println(robot2.getDirection());
+            System.out.println(robot1.getDirection());
         }
     }
 }
