@@ -19,8 +19,8 @@ public class Main {
             Zombie zombies = new Zombie(distation, colvoZombie, colvoPatronov);
 
             while (true){
-                colvoPatronov = colvoPatronov-1;
-                colvoZombie = colvoZombie-1;
+                colvoPatronov--;
+                colvoZombie--;
                 distation = distation - 0.5;
                 if (distation == 0) {
                     if ((colvoPatronov == 0) &&(colvoZombie==0)) {
