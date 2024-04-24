@@ -19,21 +19,24 @@ public class Main {
             Zombie zombies = new Zombie(distation, colvoZombie, colvoPatronov);
 
             while (true){
-                colvoPatronov = colvoPatronov - 1;
-                colvoZombie = colvoZombie - 1;
+                colvoPatronov = colvoPatronov-1;
+                colvoZombie = colvoZombie-1;
                 distation = distation - 0.5;
                 if (distation == 0) {
-                    if (colvoPatronov == 0) {
-                        System.out.println("Вы застрелили " + (zombies.getColvoZombie() - colvoZombie) + " зомби, прежде чем вас съели: поражены" );
+                    if ((colvoPatronov == 0) &&(colvoZombie==0)) {
+                        System.out.println("Вы застрелили " + zombies.getColvoZombie() + " зомби");
+                        break;
                     }
                     else {
-                        System.out.println("Вы застрелили " + (zombies.getColvoZombie() - colvoZombie) + " зомби, прежде чем вас съели: поражены");
+                        System.out.println("Вы застрелили " + (zombies.getColvoZombie() - colvoZombie) +
+                                " зомби, прежде чем вас съели: поражены");
                     }
                     break;
                 }
                 if (colvoPatronov == 0) {
                     if (colvoPatronov < colvoZombie) {
-                        System.out.println("Вы застрелили " + (zombies.getColvoZombie() - colvoZombie) + " зомби, прежде чем вас съели: кончились патроны" );
+                        System.out.println("Вы застрелили " + (zombies.getColvoZombie() - colvoZombie) +
+                                " зомби, прежде чем вас съели: кончились патроны" );
                     }
                     if (colvoPatronov == colvoZombie) {
                         System.out.println("Вы застрелили " + zombies.getColvoZombie() + " зомби");
@@ -42,7 +45,6 @@ public class Main {
                 }
                 if (colvoZombie == 0) {
                     System.out.println("Вы застрелили " + zombies.getColvoZombie() + " зомби");
-
                     break;
                 }
             }
