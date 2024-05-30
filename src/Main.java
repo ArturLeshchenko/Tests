@@ -1,7 +1,7 @@
 import java.awt.*;
-import java.util.ArrayList;
+import java.util.*;
 import java.util.List;
-import java.util.Scanner;
+import java.util.stream.Collectors;
 
 public class Main {
     public static void main(String[] args) {
@@ -38,18 +38,31 @@ public class Main {
         personList.add(person14);
         personList.add(person15);
 
-        PersonService.Starting(personList);
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Нажмите 1 для выбора опций");
-        System.out.println("Нажмите 0 для завершения");
-        String w = sc.nextLine();
-        if (w.equals("1")){
-            do {
-                PersonService.Starting(personList);
-                return;
-            }
-            while (w.equals("0"));
-        }
+        personList.removeIf(element -> element.getAge() < 30);
+        System.out.println(personList);
+
+//        PersonService.Starting(personList);
+//        Scanner sc = new Scanner(System.in);
+//        System.out.println("Нажмите 1 для выбора опций");
+//        System.out.println("Нажмите 0 для завершения");
+//        String w = sc.nextLine();
+//        if (w.equals("1")){
+//            do {
+//                PersonService.Starting(personList);
+//                return;
+//            }
+//            while (w.equals("0"));
+//        }
+//        List <Person> personList2 = personList.stream().filter(a -> a.getAge() > 30).collect(Collectors.toList());
+//        System.out.println(personList2);
+//        List <String> personList2 = personList.stream().map(Person::getName).collect(Collectors.toList());
+//        System.out.println(personList2);
+//    }
+//        personList.forEach(a -> a.setName(a.getName() + "!"));
+//        System.out.println(personList);
+//        Integer result = personList.stream().reduce(0 ,(a,b)->a + b.getAge(), Integer::sum);
+//        System.out.println(result);
+
 
     }
 }
