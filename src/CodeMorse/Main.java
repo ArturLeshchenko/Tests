@@ -46,6 +46,7 @@ public class Main {
         morse.put("..-..", "э");
         morse.put("..--", "ю");
         morse.put(".-.-", "я");
+        morse.put("   ", " ");
 
 
         System.out.println("Нажмите 1 если хотите перевести морзе в текст");
@@ -74,18 +75,13 @@ public class Main {
             String[] bykvs = sc.split("");
 
 
-            for (Map.Entry<String, String> entry : morse.entrySet()) {
-                for (String codebykvs : bykvs) {
-                    int index = 0;
-                    while (index<bykvs.length) {
-                        String value = bykvs[index];
-                        if (value.equals(entry.getValue())){
+            for (String codebykvs : bykvs) {
+                for  (Map.Entry<String, String> entry : morse.entrySet()) {
+                        if (codebykvs.equalsIgnoreCase(entry.getValue())){
                             String result = entry.getKey();
                             sb.append(result).append(" ");
-                            index++;
-                        }
-                    }
 
+                    }
                 }
             }
             System.out.print(sb);
