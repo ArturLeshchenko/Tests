@@ -1,11 +1,7 @@
 package CodeMorse;
 
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Scanner;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
+import java.util.stream.Collectors;
 
 
 public class Main {
@@ -53,10 +49,9 @@ public class Main {
         System.out.println("Нажмите 2 если хотите перевести текст в морзе");
         Scanner a = new Scanner(System.in);
         String word = a.nextLine();
-        Scanner b = new Scanner(System.in);
-        String sc = b.nextLine();
+        System.out.println("Введите текст для перевода");
+        String sc = a.nextLine();
         StringBuilder sb = new StringBuilder();
-
 
 
         if (word.equals("1")) {
@@ -72,20 +67,24 @@ public class Main {
             System.out.print(sb);
         }
         if (word.equals("2")) {
+
             String[] bykvs = sc.split("");
 
 
-            for (String codebykvs : bykvs) {
-                for  (Map.Entry<String, String> entry : morse.entrySet()) {
-                        if (codebykvs.equalsIgnoreCase(entry.getValue())){
-                            String result = entry.getKey();
-                            sb.append(result).append(" ");
-
-                    }
-                }
-            }
-            System.out.print(sb);
+//            for (String codebykvs : bykvs) {
+//
+//               String result = morse.entrySet().stream().map(k -> k.getKey())
+//                sb.append(result).append(" ");
+//
+//                for (Map.Entry<String, String> entry : morse.entrySet()) {
+//                    if (codebykvs.equalsIgnoreCase(entry.getValue())) {
+//                        String result = entry.getKey();
+//                        sb.append(result).append(" ");
+//
+//                    }
+//                }
+//                System.out.print(sb);
+//            }
         }
     }
 }
-

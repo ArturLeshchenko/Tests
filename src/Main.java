@@ -38,8 +38,8 @@ public class Main {
         personList.add(person14);
         personList.add(person15);
 
-        personList.removeIf(element -> element.getAge() < 30);
-        System.out.println(personList);
+//        personList.removeIf(element -> element.getAge() < 30);
+//        System.out.println(personList);
 
 //        PersonService.Starting(personList);
 //        Scanner sc = new Scanner(System.in);
@@ -55,8 +55,8 @@ public class Main {
 //        }
 //        List <Person> personList2 = personList.stream().filter(a -> a.getAge() > 30).collect(Collectors.toList());
 //        System.out.println(personList2);
-//        List <String> personList2 = personList.stream().map(Person::getName).collect(Collectors.toList());
-//        System.out.println(personList2);
+        List <String> personList2 = personList.stream().map(Person::getName).collect(Collectors.toList());
+        System.out.println(personList2);
 //    }
 //        personList.forEach(a -> a.setName(a.getName() + "!"));
 //        System.out.println(personList);
